@@ -251,10 +251,7 @@ class Main():
                 current_data = json.load(f)
 
             if current_data["high_score"] < self.score:
-                print("got new high score")
-
                 current_data['high_score'] = self.score
-
                 with open('datajson.json', 'w') as f:
                     json.dump(current_data, f)
             else:
